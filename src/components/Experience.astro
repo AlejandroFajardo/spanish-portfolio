@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Noviembre 2022 - Abril 2023",
+    title: "Desarrollador de paginas web y diseñador - Concepto Diseño y publicidad",
+    description:
+      "Me dedique principalmente al desarrollo de paginas web de tipo carrito de compras, landing pages y publicidad para los clientes",
+    stack: "React, Astro, MySQL, NodeJS, Boostrap, Tailwind, mongoDB"
+  },
+  {
+    date: "Junio 2022 - Octubre 2022",
+    title: "Proyecto de practicas de desarrollo web - NFF construcciones",
+    description:
+      "Responsable del desarrollo de la pagina web, componentes y utilidades del sitio web de la construcctora. ",
+      stack: "React, firebaseDB, Boostrap, NodeJS, Express"
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

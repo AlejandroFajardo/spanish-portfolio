@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout title="Alejandro Fajardo - desarrollador web" description="Desarrollador web y estudiante de ingenieria de sistemas y computacion.">
+  <main class="px-4">
+    <SectionContainer id="sobre-mi" class="py-44 pb-32">
+      <img class="rounded-full size-12 mb-4" src="/111.jpeg" />
+      <h1
+        class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hola, Soy Alejandro  <a
+          href="https://www.linkedin.com/in/dalejandrofajardoa/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2
+        class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
+      >
+        <span
+          class="text-yellow-800 dark:text-yellow-200"
+        >
+          Desarrollador Web y estudiante de ingenieria de sistemas.</span
+        >
+        <span class="text-sky-800 dark:text-sky-200"
+          >Especializado en crear aplicaciones únicas.</span
+        >
+      </h2>
+
+      <SectionContainer id="contacto">
+        <nav class="flex gap-4 mt-8 flex-wrap">
+          <SocialPill href="https://www.linkedin.com/in/dalejandrofajardoa/">
+            <LinkedInIcon class="size-4 md:size-6" />
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/AlejandroFajardo">
+            <GitHubIcon class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:dafadio19@gmail.com">
+            <MailIcon class="size-4 md:size-6" />
+            dafadio19@gmail.com
+          </SocialPill>
+        </nav>
+      </SectionContainer>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <Briefcase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>
